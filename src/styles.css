@@ -1,0 +1,104 @@
+/* Header*/
+.navbar {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #ffffff0e;
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgb(0, 0, 0);
+}
+
+.navbar-brand {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.nav-link {
+  font-size: 18px;
+  font-weight: 400;
+  transition: color 0.3s;
+  padding-left: 25px; 
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #00aced;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    text-align: center; 
+  }
+  .nav-link {
+    margin: 0.5rem 0; 
+  }
+}
+
+/* footer */
+.text-center{
+  color: #fff;
+}
+
+/* HomePage */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  background-image: url('./assets/backgraundpopov-9vDdkxSCAD4-unsplash.jpg');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+  text-align: center;
+  
+}
+
+.context{
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 80vh; 
+  flex-direction: column;
+}
+
+.home-welcom{
+  color: #fff;
+  font-size: 64px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.slogen{
+  color: #fff;
+  font-size: 24px;
+}
+
+
+
+.header {
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+}
+
+.dashboard-container {
+  padding: 20px;
+}
+
+.event-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.home-page, .create-event-page, .dashboard-page, .profile-page, .reports-page {
+  padding: 20px;
+}
