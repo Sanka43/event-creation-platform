@@ -9,8 +9,8 @@ const HomePage = () => {
     <div className='body'>
       <Header/>
         <div className='context'>
-          <h1 className='home-welcom'>Welcome to the Event Creation Platform</h1>
-          <p className='slogen'>Create and manage events with ease.</p>
+          <h1 className='home-welcom'>Your Gateway to Seamless Event Planning</h1>
+          <p className='slogen'>Create, Connect, Celebrate – Events Made Easy!</p>
         </div>
       <Footer/>
     </div>
