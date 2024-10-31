@@ -1,17 +1,29 @@
-// src/pages/HomePage.js
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../styles.css';
+import facebook from '../assets/icons8-facebook-48.png';
+import youtube from '../assets/youtube.png';
+import Whatsapp from '../assets/icons8-whatsapp-48.png';
+import x from '../assets/icons8-x-48.png';
+
+
+const images = { facebook, youtube, Whatsapp, x};
+
 
 const HomePage = () => {
+
+  const fb = 'facebook';
+  const youtube = 'youtube';
+  const Whatsapp = 'Whatsapp';
+  const x = 'x';
+
   return (
     <div className='body'>
       <Header/>
         <div className='context'>
           <p className='slogen'>Create, Connect, Celebrate – Events Made Easy!</p>
           <h1 className='home-welcom'>Your Gateway to Seamless<br/> Event Planning</h1>
-          
             <button type="button" class="button">
               <span class="fold"></span>
 
@@ -43,6 +55,14 @@ const HomePage = () => {
                   Create Event
                   </span>
             </button>
+        </div>
+        <div className='social-media'>
+          <ul>
+            <li><a href='www.facebook.com'><img src={images[fb]} alt="facebook" className='icon'/></a></li>
+            <li><a href='www.youtube.com'><img src={images[youtube]} alt="youtube" className='icon' /></a></li>
+            <li><a href='www.whatsapp.com'><img src={images[Whatsapp]} alt="whatsapp" className='icon' /></a></li>
+            <li><a href='www.x.com'><img src={images[x]} alt="X" className='icon' /></a></li>
+          </ul>
         </div>
       <Footer/>
     </div>

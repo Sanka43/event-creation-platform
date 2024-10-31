@@ -74,7 +74,7 @@ body {
   display: flex; 
   justify-content: center; 
   align-items: center; 
-  height: 85vh; 
+  height: 75vh; 
   flex-direction: column;
 }
 
@@ -92,6 +92,24 @@ body {
   font-weight: 100;
   letter-spacing: 2px;
 }
+.social-media{
+  position: absolute;
+  top: 270px;
+  
+}
+li{
+  list-style: none;
+  text-align: left;
+  padding-bottom: 20px;
+}
+a{
+  cursor: pointer;
+}
+.icon{
+  width: 30px;
+  height: 30px;
+}
+
 /* From Uiverse.io by ilkhoeri */ 
 .button {
   --h-button: 48px;
