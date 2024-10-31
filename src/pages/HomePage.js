@@ -6,6 +6,7 @@ import facebook from '../assets/icons8-facebook-48.png';
 import youtube from '../assets/youtube.png';
 import Whatsapp from '../assets/icons8-whatsapp-48.png';
 import x from '../assets/icons8-x-48.png';
+import { useNavigate } from 'react-router-dom';
 
 
 const images = { facebook, youtube, Whatsapp, x};
@@ -18,13 +19,19 @@ const HomePage = () => {
   const Whatsapp = 'Whatsapp';
   const x = 'x';
 
+  const navigate = useNavigate();
+
+  const handleNavigation = () => {
+    navigate('/event'); // Replace '/your-route' with your actual route
+  };
+
   return (
     <div className='body'>
       <Header/>
         <div className='context'>
           <p className='slogen'>Create, Connect, Celebrate – Events Made Easy!</p>
           <h1 className='home-welcom'>Your Gateway to Seamless<br/> Event Planning</h1>
-            <button type="button" class="button">
+            <button type="button" class="button" onClick={handleNavigation}>
               <span class="fold"></span>
 
               <div class="points_wrapper">
@@ -52,7 +59,7 @@ const HomePage = () => {
                   stroke-width="2.5"
                 >
                   <polyline points="13.18 1.37 13.18 9.64 21.45 9.64 10.82 22.63 10.82 14.36 2.55 14.36 13.18 1.37"></polyline></svg>
-                  Create Event
+                  Event Hub
                   </span>
             </button>
         </div>
