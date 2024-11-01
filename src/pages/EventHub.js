@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Header from '../components/Header';
-import './EventHub.css';
+import '../styles.css';
 
 const EventHub = () => {
   const [events, setEvents] = useState([]);
@@ -44,6 +44,7 @@ const EventHub = () => {
         <input type="url" name="image" placeholder="Image URL" value={eventDetails.image} onChange={handleInputChange} />
         <button type="submit">Create Event</button>
       </form>
+      
       <div className="event-list">
         <h2>Upcoming Events</h2>
         {events.map((event, index) => (
