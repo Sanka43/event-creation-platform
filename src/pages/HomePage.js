@@ -71,6 +71,9 @@ const HomePage = () => {
             <li><a href='www.x.com'><img src={images[x]} alt="X" className='icon' /></a></li>
           </ul>
         </div>
+        <div className='card-section'>
+
+        </div>
       <Footer/>
     </div>
   );

@@ -74,7 +74,7 @@ body {
   display: flex; 
   justify-content: center; 
   align-items: center; 
-  height: 75vh; 
+  height: 80vh; 
   flex-direction: column;
 }
 
@@ -109,17 +109,26 @@ a{
   width: 30px;
   height: 30px;
 }
+/* card-section */
+.card-section{
+  background-color: #252525;
+  height: 75vh;
+
+}
+
+
+/* card-section end */
 /* HomePage end*/
 
 
-/* enet hub */
+/* evet hub */
 .event-hub {
   display: flex; 
   justify-content: center; 
   align-items: center; 
   flex-direction: column;
   font-family: Arial, sans-serif;
-  padding: 0px;
+  padding: 0 60px;
 }
 
 .event-hub h1 {
@@ -128,30 +137,36 @@ a{
 
 .event-hub form {
   padding: 25px;
+  margin-bottom: 25px;
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 600px;
   height: auto;
-  background-color: rgba(255, 255, 255, 0.382); 
+  background-color: rgba(0, 0, 0, 0.382); 
   backdrop-filter: blur(10px);
   border-radius: 10px; 
-  color: #fff; 
-
+  color: #ffffff; 
+  
 }
 
 .event-hub input, .event-hub textarea {
-  
-  margin-bottom: 20px;
-  border-radius: 0.375rem;
-  border: 1px solid rgba(55, 65, 81, 1);
-
-  padding: 0.75rem 1rem;
-  color: rgb(32, 32, 32);
+  /* position: relative;
+  bottom: 20px; */
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 20px;
+  color: #fff;
 }
 .event-hub textarea {
-  min-height: 20px; 
+  min-height: 10px; 
   padding: 10px; 
   resize: vertical; 
+  
 }
 
 .event-hub button {
@@ -163,8 +178,18 @@ a{
   cursor: pointer;
 }
 
-.event-hub .event-list {
+/* .event-hub*/ .event-list { 
+  background-color: #28a74647;
+  border-radius: 15px;
   margin-top: 20px;
+  position: relative;
+  top: -82vh;
+  align-items: center;
+  width: 600px;
+  left: 750px;
+  height: 510px;
+  padding: 20px;
+
 }
 
 .event-hub .event-item {
@@ -178,6 +203,7 @@ a{
   max-width: 100%;
   height: auto;
 }
+
 /* event hub end */
 
 
