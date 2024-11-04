@@ -58,7 +58,7 @@ const EventHub = () => {
         <input type="date" name="date" 
           style={{
             color: "transparent",  // Hide placeholder color
-            textShadow: "0 0 0 #000",  // Display entered text in black
+            // textShadow: "0 0 0 #000",  // Display entered text in black
           }}
           value={eventDetails.date} onChange={handleInputChange} required />
         <label >
@@ -131,7 +131,7 @@ const EventHub = () => {
       </form>
       
       {/* <div className="event-list">
-        <h2>Pri</h2>
+        <h2>Previwe</h2>
         {events.map((event, index) => (
           <div key={index} className="event-item">
             <h3>{event.title}</h3>

@@ -132,7 +132,7 @@ a{
 }
 
 .event-hub h1 {
-  color: #333;
+  color: #1c1c1c;
 }
 
 .event-hub form {
@@ -178,8 +178,8 @@ a{
   cursor: pointer;
 }
 
-/* .event-hub*/ .event-list { 
-  background-color: #28a74647;
+/* .event-hub .event-list {  */
+  /* background-color: #28a74647;
   border-radius: 15px;
   margin-top: 20px;
   position: relative;
@@ -188,9 +188,9 @@ a{
   width: 600px;
   left: 750px;
   height: 510px;
-  padding: 20px;
+  padding: 20px; 
 
-}
+} */
 
 .event-hub .event-item {
   border: 1px solid #252525;
@@ -205,6 +205,35 @@ a{
 }
 
 /* event hub end */
+
+/* event-list */
+.event-list{
+  position:relative;
+  background-color: #1c1c1c;
+  width: 100%;
+  height: 100%;
+  padding: 20px 60px;
+  display: inline;
+}
+
+.cards{
+  background-color: #ffffffe8;
+  width: 150px;
+  height: 300px;
+  border-radius: 15px;
+  backdrop-filter: blur(60px);
+  box-shadow: 0 4px 15px rgb(6, 174, 174);
+}
+
+.event-list h1{
+  color: #c2c2c2;
+}
+
+.event-list p{
+  color: #2c2c2c;
+}
+
+/* event-list end */
 
 
 /* From Uiverse.io by ilkhoeri */ 

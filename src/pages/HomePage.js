@@ -1,4 +1,5 @@
 import React from 'react';
+// import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../styles.css';
@@ -71,9 +72,32 @@ const HomePage = () => {
             <li><a href='www.x.com'><img src={images[x]} alt="X" className='icon' /></a></li>
           </ul>
         </div>
-        <div className='card-section'>
-
+        <div className='event-list'>
+          <div className='cards'>
+            <h1>Title</h1>
+            <p>time</p>
+            <p>Location</p>
+            <p>Discription</p>
+            <p>image</p>
+          </div>
+          <div className='cards'>
+            <h1>Title</h1>
+            <p>time</p>
+            <p>Location</p>
+            <p>Discription</p>
+            <p>image</p>
+          </div>
+          <div className='cards'>
+            <h1>Title</h1>
+            <p>time</p>
+            <p>Location</p>
+            <p>Discription</p>
+            <p>image</p>
+          </div>
         </div>
+
+        
+        
       <Footer/>
     </div>
   );
