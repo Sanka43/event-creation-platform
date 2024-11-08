@@ -74,30 +74,151 @@ const HomePage = () => {
         </div>
         <div className='event-list'>
           <div className='cards'>
-            <h1>Title</h1>
-            <p>time</p>
-            <p>Location</p>
-            <p>Discription</p>
-            <p>image</p>
-          </div>
-          <div className='cards'>
-            <h1>Title</h1>
-            <p>time</p>
-            <p>Location</p>
-            <p>Discription</p>
-            <p>image</p>
-          </div>
-          <div className='cards'>
-            <h1>Title</h1>
-            <p>time</p>
-            <p>Location</p>
-            <p>Discription</p>
-            <p>image</p>
-          </div>
-        </div>
+            <div className='details'>
+              <h1>In The Movement</h1>
+              <p>24/12/2024</p>
+              <p>at Nuwara-Eliya</p>
+              <p>
+                  269,944 views  Feb 27, 2024  NUWARA ELIYA
+                  Embark on a live musical journey through the breathtaking landscapes of Nuwaraeliya, 
+                  <br/>Sri Lanka as ECHO DAFT takes you on a magical 1 and 1/2 hrs set 🎶🏔️ Hosted by @inthemoment 🚀
 
-        
-        
+                  Video Credits<br/> 
+                  Artist : ECHO DAFT<br/>
+                  Venue : Mariner's Restaurant Nuwaraeliya<br/> 
+                  Video produced by | 369 Films<br/>
+                  DOP / Post Production : Chamitha Minosh<br/>
+                  Cameramen : Bryan Miskin | Nisal J Warna<br/>
+                  Drone Pilot : Namidu Malshan<br/>
+                  Graphic Design : Nisal J Warna<br/>
+              </p>
+              <button>
+                BOOK  
+                <div className="star-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlSpace="preserve"
+                    version="1.1"
+                    style={{ shapeRendering: 'geometricPrecision', textRendering: 'geometricPrecision', imageRendering: 'optimizeQuality', fillRule: 'evenodd', clipRule: 'evenodd' }}
+                    viewBox="0 0 784.11 815.53"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <defs></defs>
+                    <g id="Layer_x0020_1">
+                      <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                      <path
+                        className="fil0"
+                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+                <div className="star-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlSpace="preserve"
+                    version="1.1"
+                    style={{ shapeRendering: 'geometricPrecision', textRendering: 'geometricPrecision', imageRendering: 'optimizeQuality', fillRule: 'evenodd', clipRule: 'evenodd' }}
+                    viewBox="0 0 784.11 815.53"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <defs></defs>
+                    <g id="Layer_x0020_1">
+                      <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                      <path
+                        className="fil0"
+                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+                <div className="star-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlSpace="preserve"
+                    version="1.1"
+                    style={{ shapeRendering: 'geometricPrecision', textRendering: 'geometricPrecision', imageRendering: 'optimizeQuality', fillRule: 'evenodd', clipRule: 'evenodd' }}
+                    viewBox="0 0 784.11 815.53"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <defs></defs>
+                    <g id="Layer_x0020_1">
+                      <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                      <path
+                        className="fil0"
+                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+                <div className="star-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlSpace="preserve"
+                    version="1.1"
+                    style={{ shapeRendering: 'geometricPrecision', textRendering: 'geometricPrecision', imageRendering: 'optimizeQuality', fillRule: 'evenodd', clipRule: 'evenodd' }}
+                    viewBox="0 0 784.11 815.53"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <defs></defs>
+                    <g id="Layer_x0020_1">
+                      <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                      <path
+                        className="fil0"
+                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+                <div className="star-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlSpace="preserve"
+                    version="1.1"
+                    style={{ shapeRendering: 'geometricPrecision', textRendering: 'geometricPrecision', imageRendering: 'optimizeQuality', fillRule: 'evenodd', clipRule: 'evenodd' }}
+                    viewBox="0 0 784.11 815.53"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <defs></defs>
+                    <g id="Layer_x0020_1">
+                      <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                      <path
+                        className="fil0"
+                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+                <div className="star-6">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlSpace="preserve"
+                    version="1.1"
+                    style={{ shapeRendering: 'geometricPrecision', textRendering: 'geometricPrecision', imageRendering: 'optimizeQuality', fillRule: 'evenodd', clipRule: 'evenodd' }}
+                    viewBox="0 0 784.11 815.53"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <defs></defs>
+                    <g id="Layer_x0020_1">
+                      <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                      <path
+                        className="fil0"
+                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+              </button>
+
+
+
+            </div>
+          </div>
+          
+
+          
+        </div>
+      
       <Footer/>
     </div>
   );
