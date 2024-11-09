@@ -75,23 +75,10 @@ const HomePage = () => {
         <div className='event-list'>
           <div className='cards'>
             <div className='details'>
-              <h1>In The Movement</h1>
-              <p>24/12/2024</p>
-              <p>at Nuwara-Eliya</p>
-              <p>
-                  269,944 views  Feb 27, 2024  NUWARA ELIYA
-                  Embark on a live musical journey through the breathtaking landscapes of Nuwaraeliya, 
-                  <br/>Sri Lanka as ECHO DAFT takes you on a magical 1 and 1/2 hrs set 🎶🏔️ Hosted by @inthemoment 🚀
-
-                  Video Credits<br/> 
-                  Artist : ECHO DAFT<br/>
-                  Venue : Mariner's Restaurant Nuwaraeliya<br/> 
-                  Video produced by | 369 Films<br/>
-                  DOP / Post Production : Chamitha Minosh<br/>
-                  Cameramen : Bryan Miskin | Nisal J Warna<br/>
-                  Drone Pilot : Namidu Malshan<br/>
-                  Graphic Design : Nisal J Warna<br/>
-              </p>
+              {/* <h1>{event.title}</h1>
+              <p>{event.date}</p>
+              <p>{event.titme}</p>
+              <p>{event.title}</p> */}
               <button>
                 BOOK  
                 <div className="star-1">
@@ -209,14 +196,8 @@ const HomePage = () => {
                   </svg>
                 </div>
               </button>
-
-
-
             </div>
-          </div>
-          
-
-          
+          </div>  
         </div>
       
       <Footer/>
