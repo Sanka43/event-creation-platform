@@ -170,6 +170,7 @@ a{
 }
 
 .event-hub button {
+  margin-top: 18px;
   padding: 10px;
   background-color: #28a745;
   color: white;

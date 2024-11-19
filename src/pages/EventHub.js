@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import app from "../firebaseConfig";
+import { getDatabase, ref, set, push } from "firebase/database";
 import Header from '../components/Header';
 import '../styles.css';
 import styled from 'styled-components';
-import axios from 'axios';
 
 const EventHub = () => {
   const [title, setTitle] = useState('');
@@ -10,132 +11,134 @@ const EventHub = () => {
   const [time, setTime] = useState('');
   const [location, setLocation] = useState('');
   const [description, setDescription] = useState('');
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState('');
 
   const handleSubmit = async (e) => {
-      e.preventDefault();
-      const formData = new FormData();
-      formData.append('title', title);
-      formData.append('date', date);
-      formData.append('time', time);
-      formData.append('location', location);
-      formData.append('description', description);
-      formData.append('image', image);
-
-      try {
-          await axios.post('/api/events', formData, {
-              headers: {
-                  'Content-Type': 'multipart/form-data',
-              },
-          });
-          // Reset form fields
-          setTitle('');
-          setDate('');
-          setTime('');
-          setLocation('');
-          setDescription('');
-          setImage(null);
-      } catch (error) {
-          console.error('Error uploading event:', error);
-      }
+    e.preventDefault(); // Prevents default form submission
+    const db = getDatabase(app);
+    const newDocRef = push(ref(db, "collection/events"));
+    set(newDocRef, {
+      title,
+      date,
+      time,
+      location,
+      description,
+      image, // Save image URL
+    })
+      .then(() => {
+        alert("Published...");
+      })
+      .catch((error) => {
+        alert("Error: " + error.message);
+      });
   };
 
   return (
     <div className='event-body'>
-      <Header/>
+      <Header />
       <div className="event-hub">
-      <form onSubmit={handleSubmit}>
-      <h1>Create Event</h1>
-      <StyledWrapper>
-      <div className="form-control">
-        <input type="text" name="title" value={title} onChange={(e) => setTitle(e.target.value)} required />
-        <label className='label1'>
-          <span style={{transitionDelay: '0ms'}}>E</span>
-          <span style={{transitionDelay: '50ms'}}>v</span>
-          <span style={{transitionDelay: '100ms'}}>e</span>
-          <span style={{transitionDelay: '150ms'}}>n</span>
-          <span style={{transitionDelay: '200ms'}}>t</span>
-          <span style={{transitionDelay: "200ms"}}></span>
-          <span style={{transitionDelay: '250ms'}}>T</span>
-          <span style={{transitionDelay: '300ms'}}>i</span>
-          <span style={{transitionDelay: '350ms'}}>t</span>
-          <span style={{transitionDelay: '400ms'}}>e</span>
-        </label>
-        
-        <input type="date" name="date" 
-          style={{
-            color: "transparent",  // Hide placeholder color
-            textShadow: "0 0 0 #000",  // Display entered text in black
-          }}
-          value={date} onChange={(e) => setDate(e.target.value)} required />
-        <label >
-          <span style={{transitionDelay: "0ms"}}>D</span>
-          <span style={{transitionDelay: "50ms"}}>a</span>
-          <span style={{transitionDelay: "100ms"}}>t</span>
-          <span style={{transitionDelay: "150ms"}}>e</span>
-        </label>
+        <form onSubmit={handleSubmit}>
+          <h1>Create Event</h1>
+          <StyledWrapper>
+            <div className="form-control">
+              <input id="title" type="text" name="title" value={title} onChange={(e) => setTitle(e.target.value)} required />
+              <label className='label1'>
+                <span style={{transitionDelay: '0ms'}}>E</span>
+                <span style={{transitionDelay: '50ms'}}>v</span>
+                <span style={{transitionDelay: '100ms'}}>e</span>
+                <span style={{transitionDelay: '150ms'}}>n</span>
+                <span style={{transitionDelay: '200ms'}}>t</span>
+                <span style={{transitionDelay: "200ms"}}></span>
+                <span style={{transitionDelay: '250ms'}}>T</span>
+                <span style={{transitionDelay: '300ms'}}>i</span>
+                <span style={{transitionDelay: '350ms'}}>t</span>
+                <span style={{transitionDelay: '400ms'}}>e</span>
+              </label>
 
-        <input type="time" name="time" 
-          style={{
-            color: "transparent",  
-          }}
-          value={time} onChange={(e) => setTime(e.target.value)} required />
-        <label >
-          <span style={{transitionDelay: "0ms"}}>T</span>
-          <span style={{transitionDelay: "50ms"}}>i</span>
-          <span style={{transitionDelay: "100ms"}}>m</span>
-          <span style={{transitionDelay: "150ms"}}>e</span>
-        </label>
+              <input 
+                id="date" 
+                type="date" 
+                name="date" 
+                value={date} 
+                onChange={(e) => setDate(e.target.value)}
+                required
+                style={{
+                  color: "transparent",  // Hide placeholder color
+                  // textShadow: "0 0 0 #000",  // Display entered text in black
+                }}/>
+              <label >
+                <span style={{transitionDelay: "0ms"}}>D</span>
+                <span style={{transitionDelay: "50ms"}}>a</span>
+                <span style={{transitionDelay: "100ms"}}>t</span>
+                <span style={{transitionDelay: "150ms"}}>e</span>
+              </label>
 
-        <input type="text" name="location" value={location} onChange={(e) => setLocation(e.target.value)} required />
-        <label>
-          <span style={{transitionDelay: "0ms"}}>L</span>
-          <span style={{transitionDelay: "100ms"}}>o</span>
-          <span style={{transitionDelay: "150ms"}}>c</span>
-          <span style={{transitionDelay: "200ms"}}>a</span>
-          <span style={{transitionDelay: "250ms"}}>t</span>
-          <span style={{transitionDelay: "300ms"}}>i</span>
-          <span style={{transitionDelay: "350ms"}}>o</span>
-          <span style={{transitionDelay: "400ms"}}>n</span>
-        </label>
+              <input 
+                id="time" 
+                type="time" 
+                name="time" 
+                value={time} 
+                onChange={(e) => setTime(e.target.value)}
+                style={{
+                  color: "transparent",  // Hide placeholder color
+                  // textShadow: "0 0 0 #000",  // Display entered text in black
+                }}
+                required />
+              <label >
+                <span style={{transitionDelay: "0ms"}}>T</span>
+                <span style={{transitionDelay: "50ms"}}>i</span>
+                <span style={{transitionDelay: "100ms"}}>m</span>
+                <span style={{transitionDelay: "150ms"}}>e</span>
+              </label>
 
-        <input type="text" name="description" value={description} onChange={(e) => setDescription(e.target.value)} required />
-        <label>
-          <span style={{transitionDelay: "0ms"}}>D</span>
-          <span style={{transitionDelay: "50ms"}}>i</span>
-          <span style={{transitionDelay: "100ms"}}>s</span>
-          <span style={{transitionDelay: "150ms"}}>c</span>
-          <span style={{transitionDelay: "200ms"}}>r</span>
-          <span style={{transitionDelay: "250ms"}}>i</span>
-          <span style={{transitionDelay: "300ms"}}>p</span>
-          <span style={{transitionDelay: "350ms"}}>t</span>
-          <span style={{transitionDelay: "400ms"}}>i</span>
-          <span style={{transitionDelay: "450ms"}}>o</span>
-          <span style={{transitionDelay: "500ms"}}>n</span>
-        </label>
+              <input id="location" type="text" name="location" value={location} onChange={(e) => setLocation(e.target.value)} required />
+              <label>
+                <span style={{transitionDelay: "0ms"}}>L</span>
+                <span style={{transitionDelay: "100ms"}}>o</span>
+                <span style={{transitionDelay: "150ms"}}>c</span>
+                <span style={{transitionDelay: "200ms"}}>a</span>
+                <span style={{transitionDelay: "250ms"}}>t</span>
+                <span style={{transitionDelay: "300ms"}}>i</span>
+                <span style={{transitionDelay: "350ms"}}>o</span>
+                <span style={{transitionDelay: "400ms"}}>n</span>
+              </label>
 
-        <input type="url" name="image" value={image} onChange={(e) => setImage(e.target.value)} required />
-        <label>
-          <span style={{transitionDelay: "0ms"}}>L</span>
-          <span style={{transitionDelay: "50ms"}}>i</span>
-          <span style={{transitionDelay: "100ms"}}>n</span>
-          <span style={{transitionDelay: "150ms"}}>k</span>
-          <span style={{transitionDelay: "200ms"}}></span>
-          <span style={{transitionDelay: "250ms"}}>I</span>
-          <span style={{transitionDelay: "300ms"}}>m</span>
-          <span style={{transitionDelay: "350ms"}}>a</span>
-          <span style={{transitionDelay: "400ms"}}>g</span>
-          <span style={{transitionDelay: "450ms"}}>e</span>
-        </label>
-      </div>
-      </StyledWrapper>
-        <button type="submit">Create Event</button>
-      </form>
+              <input id="description" type="text" name="description" value={description} onChange={(e) => setDescription(e.target.value)} required />
+              <label>
+                <span style={{transitionDelay: "0ms"}}>D</span>
+                <span style={{transitionDelay: "50ms"}}>i</span>
+                <span style={{transitionDelay: "100ms"}}>s</span>
+                <span style={{transitionDelay: "150ms"}}>c</span>
+                <span style={{transitionDelay: "200ms"}}>r</span>
+                <span style={{transitionDelay: "250ms"}}>i</span>
+                <span style={{transitionDelay: "300ms"}}>p</span>
+                <span style={{transitionDelay: "350ms"}}>t</span>
+                <span style={{transitionDelay: "400ms"}}>i</span>
+                <span style={{transitionDelay: "450ms"}}>o</span>
+                <span style={{transitionDelay: "500ms"}}>n</span>
+              </label>
+
+              <input type="file" id="image" name="image" onChange={(e) => setImage(e.target.value)} />
+              {/* <label>
+                <span style={{transitionDelay: "0ms"}}>L</span>
+                <span style={{transitionDelay: "50ms"}}>i</span>
+                <span style={{transitionDelay: "100ms"}}>n</span>
+                <span style={{transitionDelay: "150ms"}}>k</span>
+                <span style={{transitionDelay: "200ms"}}></span>
+                <span style={{transitionDelay: "250ms"}}>I</span>
+                <span style={{transitionDelay: "300ms"}}>m</span>
+                <span style={{transitionDelay: "350ms"}}>a</span>
+                <span style={{transitionDelay: "400ms"}}>g</span>
+                <span style={{transitionDelay: "450ms"}}>e</span>
+              </label> */}
+            </div>
+          </StyledWrapper>
+          <button type="submit">Create Event</button>
+        </form>
       </div>
     </div>
   );
 };
-
 
 const StyledWrapper = styled.div`
   .form-control {
