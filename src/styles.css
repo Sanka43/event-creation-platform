@@ -209,7 +209,8 @@ a{
 
 /* event-list */
 .event-list {
-  
+  margin: 0 60px;
+  height: 500px;
   background-color: #252525;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Three columns */
