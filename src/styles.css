@@ -208,8 +208,9 @@ a{
 /* event hub end */
 
 /* event-list */
-.event-list {
-  margin: 0 60px;
+.event-list,
+.events-container{
+  margin: 60px 60px;
   height: 500px;
   background-color: #252525;
   display: grid;
@@ -217,11 +218,11 @@ a{
   gap: 20px; /* Space between cards */
 }
 
-.cards {
+.events-cards {
   margin: 20px 60px;
   padding: 20px;
   border-radius: 8px;
-  background-color: #dff0ff;
+  color: #dff0ff;
   /* background-image: url('./assets/inthemovement.jpg'); */
   background-size: cover;
   background-position: center;

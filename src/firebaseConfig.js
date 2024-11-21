@@ -1,11 +1,11 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
+import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBnQuPjpAnBMSKUl6hV39Ui-y-vgOCIeSU",
   authDomain: "create-event-e0919.firebaseapp.com",
-  databaseURL: "https://create-event-e0919-default-rtdb.europe-west1.firebasedatabase.app/",
+  databaseURL: "https://create-event-e0919-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "create-event-e0919",
   storageBucket: "create-event-e0919.firebasestorage.app",
   messagingSenderId: "273976451615",
@@ -16,5 +16,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
+const database = getDatabase(app);
 
-export default app;
+export { database }; // Named export for `database`
+export default app; // Default export for `app`

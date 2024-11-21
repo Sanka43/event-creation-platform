@@ -11,9 +11,9 @@ const Header = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
           <Nav.Link as={Link} to="/">Home</Nav.Link>
-          <Nav.Link as={Link} to="/dashboard">Dashboard</Nav.Link>
-          <Nav.Link as={Link} to="/create-event">Create Event</Nav.Link>
-          <Nav.Link as={Link} to="/CountdownTimer">CountdownTimer</Nav.Link>
+          <Nav.Link as={Link} to="/FutureEvents">FutureEvents</Nav.Link>
+          {/* <Nav.Link as={Link} to="/create-event">Create Event</Nav.Link> */}
+          {/* <Nav.Link as={Link} to="/CountdownTimer">CountdownTimer</Nav.Link> */}
         </Nav>
       </Navbar.Collapse>
     </Navbar>
