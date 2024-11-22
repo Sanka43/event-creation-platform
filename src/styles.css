@@ -208,50 +208,111 @@ a{
 /* event hub end */
 
 /* event-list */
-.event-list,
-.events-container{
-  margin: 60px 60px;
-  height: 500px;
-  background-color: #252525;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three columns */
-  gap: 20px; /* Space between cards */
-}
-
-.events-cards {
-  margin: 20px 60px;
+/* .events-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   padding: 20px;
+  justify-content: center;
+  
+}
+
+.event-card {
+  background-color: #f9f9f9;
+  
+  border: 1px solid #ddd;
   border-radius: 8px;
-  color: #dff0ff;
-  /* background-image: url('./assets/inthemovement.jpg'); */
-  background-size: cover;
-  background-position: center;
-  /* filter: blur(4px);  */
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Adds shadow effect */
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-.cards:hover {
-  transform: translateY(-5px); /* Slight lift on hover */
-  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
-}
-
-.cards h1 {
-  color: #2c2c2c;
-  font-size: 36px;
-
-}
-
-.cards img {
+  padding: 15px;
   width: 100%;
+  margin-left: 60px;
+  margin-right: 60px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.event-card img {
+  max-width: 100%;
   height: auto;
   border-radius: 8px;
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.cards button {
+.event-card h2 {
+  font-size: 64px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.event-card p {
+  font-size: 1em;
+  color: #555;
+} */
+
+/* From Uiverse.io by javierBarroso */ 
+.card {
+  /* width: 50%; */
+  height: 600px;
+  margin: 0 60px 20px 60px;
+  background: rgba(223, 225, 235, 0.537);
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow:
+    inset 0px 56px 40px #2224,
+    inset 0px -56px 40px #fff,
+    1px 1px 2px #fff,
+    -1px -1px 2px #4442;
+
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* gap: 20px; */
+  /* padding: 20px; */
+  /* justify-content: center; */
+}
+.image{
+  width: auto;
+  height: 200px;
+  
+}
+img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 10px;
+}
+.countdown {
+  font-size: 36px;
+  color: #2c2c2c;
+  font-weight: bold;
+  margin-top: 0px;
+  width: auto;
+}
+.content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300%;
+  height: 30%;
+  transform: translateX(0%);
+  animation: anim 6s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.word {
+  width: 50%;
+  text-align: center;
+  color: #333;
+  font-size: 30px;
+  font-weight: 600;
+  text-shadow: 9px 8px 3px #4443;
+}
+.Description{
+  text-align: center;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+  /* text-shadow: 9px 8px 3px #4443; */
+}
+button {
   position: relative;
   padding: 12px 35px;
   background: #fec195;
@@ -263,7 +324,45 @@ a{
   box-shadow: 0 0 0 #fec1958c;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
+
+@keyframes anim {
+  0% {
+    transform: translateX(0%);
+  }
+  20% {
+    transform: translateX(0%);
+  }
+  30% {
+    transform: translateX(-33.33%);
+  }
+  70% {
+    transform: translateX(-33.33%);
+  }
+  80% {
+    transform: translateX(-66.66%);
+  }
+  100% {
+    transform: translateX(-66.66%);
+  }
+}
+
+
+/* .event-card button {
+  position: relative;
+  padding: 12px 35px;
+  background: #fec195;
+  font-size: 17px;
+  font-weight: 500;
+  color: #181818;
+  border: 3px solid #fec195;
+  border-radius: 8px;
+  box-shadow: 0 0 0 #fec1958c;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+} */
 
 .star-1 {
   position: absolute;

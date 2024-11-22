@@ -72,7 +72,7 @@ const HomePage = () => {
           <li><a href='https://www.x.com'><img src={images.x} alt="X" className='icon' /></a></li>
         </ul>
       </div>
-      <div className='event-list'>
+      {/* <div className='event-list'>
         {events.length > 0 ? (
           events.map((event) => (
             <div className='cards' key={event.id}>
@@ -87,7 +87,7 @@ const HomePage = () => {
         ) : (
           <p>No events available :( </p>
         )}
-      </div>
+      </div> */}
       <Footer />
     </div>
   );
